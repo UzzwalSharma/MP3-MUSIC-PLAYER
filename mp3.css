@@ -1,0 +1,330 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    /* background-image: linear-gradient(to top, #fff1eb 0%, #ace0f9 100%); */
+    font-family: "Segoe UI", sans-serif;
+    background-color: #121212; /* Dark background for a modern look */
+    color: #ffffff; 
+}
+
+.container {
+    
+    border: none;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height: 90vh;
+    width: 30vw;
+    background-color: #F0F8FF; /* AliceBlue */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+    overflow: hidden; /* Ensures no overflow */
+    font-family: "Segoe UI", sans-serif;
+    background-color: #433e3e;
+    /* text-align: center; */
+    z-index: 4;
+}
+
+/* .container:hover {
+    transform: translateY(-10px); } */
+
+.heading {
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 20px; /* Added space below the heading */
+    font-family: "Segoe UI", sans-serif;
+}
+
+.coverart img {
+    width: 250px;
+    height: 250px;
+    border: 8px solid #ffffff;
+    border-radius: 50%;
+    box-shadow: 5px 8px 10px 2px rgba(33, 28, 28, 0.75);
+}
+
+.songdetails {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    justify-content: center;
+    font-family: "Segoe UI", sans-serif;
+}
+
+.controls {
+    display: flex;
+    gap: 40px;
+    margin-top: 15px;
+}
+
+button {
+    border: none;
+    border-radius: 50%;
+    font-size: 40px; /* Icon size */
+    padding: 10px 15px;
+    box-shadow: 2px 5px 10px rgba(33, 28, 28, 0.5);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+button:hover {
+    background-color: #87CEEB; /* Spotify green on hover */
+    transform: scale(1.1); /* Slight increase in size on hover */
+}
+
+.seek button, .play button {
+    background-color: #F0F8FF; /* Matching container bg but feel free to change */
+    color: #2F4F4F; /* Dark Slate Gray - for icons */
+}
+
+.play button:hover {
+    background-color: #87CEEB; /* Medium Spring Green for hover */
+}
+
+.seek button:hover {
+    background-color: #87CEFA; /* Light Sky Blue for hover */
+}
+.seekbar {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 12px; /* Space between slider and duration labels */
+}
+.seekbar input {
+    width: 20vw;
+    height: 8px;
+    appearance: none;
+    background-color: #87CEEB; /* SkyBlue */
+    border-radius: 5px;
+    cursor: pointer;
+   
+}
+
+input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 20px;
+    height: 20px;
+    background-color: #4682B4; /* SteelBlue */
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+    
+}
+.rotate{
+    animation:  rotation 1.8s infinite linear;
+}
+
+
+@keyframes rotation{
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(359deg);
+    }
+}
+.loader {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+}
+
+.loader .stroke {
+    height: 70px;
+    width: 10px;
+    border-radius: 5px;
+    animation: animate 1.4s linear infinite;
+}
+
+/* Your existing loader and keyframes styles follow */
+
+    @keyframes animate {
+      50% {
+        height: 40%;
+        background: #1f08e6;
+      }
+  
+      100% {
+        background: #ffea06;
+        height: 100%;
+      }
+    }
+    .stroke:nth-child(1){
+        animation-delay: 0s;
+        background-color: #FF6347; /* Tomato */
+    }
+    .stroke:nth-child(2){
+      animation-delay: 0.3s;
+      background-color: #66CDAA; /* MediumAquamarine */
+  }
+  .stroke:nth-child(3){
+      animation-delay: 0.6s;
+      background-color: #4169E1; /* RoyalBlue */
+  }
+  .stroke:nth-child(4){
+      animation-delay: 0.9s;
+      background-color: #FFD700; /* Gold */
+  }
+  .stroke:nth-child(5){
+      animation-delay: 0.6s;
+      background-color: #FF6347; /* Tomato */
+  }
+  .stroke:nth-child(6){
+      animation-delay: 0.3s;
+      background-color: #4169E1; /* RoyalBlue */
+  }
+  .stroke:nth-child(7){
+      animation-delay: 0s;
+      background-color: #FF6347; /* Tomato */
+  }
+
+  .icon {
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+}
+
+.heart {
+    padding: 8px;
+    font-size: 40px;
+    margin-bottom: 4PX;
+    align-items: center;
+}
+
+.micon {
+    padding: 8px;
+    font-size: 40px;
+    align-items: center;
+    margin-bottom: 4px;
+}
+
+/* Add this CSS to style the play icon in the playlist */
+.playlist {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    height: 80vh; /* Set a specific height */
+    width: 30vw;
+    background-color: #5297d3; /* AliceBlue */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+    overflow-y: scroll; /* Enable vertical scrolling */
+    border-radius: 20px;
+    position: absolute;
+    bottom: 0px;
+    opacity: 0;
+    z-index: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+.playlist .play-icon {
+    font-size: 20px; /* Adjust icon size */
+    margin-right: 10px; /* Add space between icon and text */
+    color: #fff; /* Set the color of the icon */
+}
+
+.playlist .psong {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    transition: background-color 0.3s ease;
+}
+#sg{
+    margin: 0;
+    font-size: 30px;
+    color: #161313;
+    font-family: "Segoe UI", sans-serif;
+    transition: color 0.3s ease;
+    font-weight: bolder;
+}
+.playlist .psong:hover {
+    background-color: #3a3a3a;
+}
+
+.playlist .psong p {
+    margin: 0;
+    font-size: 16px;
+    color: #fff;
+    font-family: "Segoe UI", sans-serif;
+    transition: color 0.3s ease;
+}
+
+.playlist .psong:hover p {
+    color: #87CEEB; /* Change the color on hover */
+}
+
+.playlist .play-icon {
+    width: 30px; /* Adjust size as needed */
+    height: 30px; /* Adjust size as needed */
+    margin-right: 10px; /* Add space between icon and text */
+}
+
+
+.active{
+    opacity: 1;
+    z-index: 10;
+
+}
+.song-item {
+    cursor: pointer;
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 20px; /* Added space below the heading */
+    font-family: "Segoe UI", sans-serif;
+}
+
+.song-item:hover {
+    background-color: #3a3a3a;
+}
+
+.song-name {
+    margin: 0;
+    font-size: 16px;
+    color: #fff;
+    font-family: "Segoe UI", sans-serif;
+    transition: color 0.3s ease;
+}
+
+.song-item:hover .song-name {
+    color: #87CEEB; /* Change the color on hover */
+}
+/* Example media query for smaller screens */
+@media (max-width: 768px) {
+    .container {
+      width: 90%; /* Adjust container width for smaller screens */
+    }
+  
+    .controls button {
+      font-size: 30px; /* Decrease button size for smaller screens */
+    }
+  }
+  @media (max-width: 480px) {
+    .seekbar input {
+        width: 70%; /* Adjust width for even smaller screens */
+    }
+
+    input[type="range"]::-webkit-slider-thumb {
+        width: 15px; /* Further adjust thumb size */
+        height: 15px; /* Further adjust thumb size */
+    }
+
+    .seekbar {
+        padding: 0 5%; /* Adjust padding for smaller screens */
+    }
+}
+
+
+
+
+/* KAISA YE ISHK HAI
+VIGDIYA HEERIYA */

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://kit.fontawesome.com/fdc47ca2be.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="mp3.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sawarabi+Gothic&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Protest+Strike&family=Sawarabi+Gothic&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+      <div class="icon">
+<div class="heart">
+      <button id="hearticon">
+        <i class="fa-solid fa-heart" id="heartclass"></i>
+      </button>  
+      </div>
+      
+        <div class="heading"> 
+             <h3 id="nowplaying">Playing music 1 of 21</h3>
+        </div>
+        <div class="micon">
+          <button>
+            <i class="fa-solid fa-music" id="musicicon"></i>
+          </button>
+          
+        </div>
+      </div>
+      
+      <div class="coverart">
+      <img src="images.jpg" alt="sognart" srcset="">
+      </div>
+
+      <div class="songdetails">
+
+        <div class="song">
+            <h1 id="track">YOU AND ME</h1>
+        </div>
+        <div class="artistname"> 
+            <h2 id="artist">SHUBH</h2>
+            
+        </div>
+        <div class="audio"><audio src="You And Me - Shubh.mp3"  id="audio"></audio>
+        </div>
+        <div class="seekbar">
+            <!-- <div class="initailtime">00:00</div> -->
+             <input type="range" id="seekBar" value="0">
+             <!-- <div class="finaltime" id="ft">2:04</div> -->
+         </div>
+        
+      </div>
+      
+<div class="controls">
+  <!-- shuffle  <i class="fa-solid fa-shuffle"></i> -->
+  <div class="seek">
+    <button><i class="fa-solid fa-backward" id="prev"></i></button>
+  </div>
+ <div class="play">
+    <button id="play"><i class="fa-solid fa-play" id="play-pause"></i></button>
+    
+ </div>
+  
+  <div class="seek">
+    <button> <i class="fa-solid fa-forward" id="next"></i></button>
+   
+  </div>
+  
+</div>
+<div id="wave">
+  <span class="stroke"></span>
+  <span class="stroke"></span>
+  <span class="stroke"></span>
+  <span class="stroke"></span>
+  <span class="stroke"></span>
+  <span class="stroke"></span>
+  <span class="stroke"></span>
+</div>  
+    </div>
+
+    <div class="playlist">
+      <div class="psong">
+          <!-- <i class="fas fa-play play-icon"></i> Play icon -->
+          <p id="sg">SONGS KA ADDA</p>
+      </div>
+      <!-- Add more songs similarly -->
+  </div>
+  
+    
+<script src="mp3.js"></script>
+</body>
+</html>
